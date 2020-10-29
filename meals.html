@@ -17,7 +17,7 @@
   <script>
 
   // initialize the map
-  var map = L.map('map').setView([42.35, -71.08], 13);
+  var map = L.map('map').setView([42.35, -71.08], 11);
 
   // load a tile layer
   L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
@@ -40,7 +40,7 @@
     var rodents = L.geoJson(data,{
       pointToLayer: function(feature,latlng){
         var marker = L.marker(latlng,{icon: ratIcon});
-        marker.bindPopup(feature.properties.siteName + '<br/>' + feature.properties.siteStatus);
+        marker.bindPopup("Site Name = " + feature.properties.siteName + '<br/>' + "Status = " + feature.properties.siteStatus);
         return marker;
       }}).addTo(map);
     });
