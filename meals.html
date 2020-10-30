@@ -8,11 +8,10 @@
   <script src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js"></script>
   <script src="leaflet.markercluster.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
- 
+
  <style>
-    #map{ height: 100%;
-          left: 200;}
-    
+    #map{ height: 100% }
+
     * {
   box-sizing: border-box;
 }
@@ -67,14 +66,18 @@ body {
   <a href="meals.html">Access to meal sites for K-12 families in Boston, MA</a>
 </div>
 
+<div class="content">
+  <h2>CSS Template</h2>
+  <p>A full-height, fixed sidenav and content.</p>
+</div>
 
   <script>
 
   // initialize the map
-  var map = L.map('map').setView([42.35, -71.08], 12.5);
+  var map = L.map('map').setView([42.35, -71.08], 11);
 
   // load a tile layer
-  L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
     {
       attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
       maxZoom: 17,
