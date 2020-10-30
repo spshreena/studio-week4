@@ -1,22 +1,18 @@
-<html>
-<head>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+<title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>A Leaflet map!</title>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<title>A Leaflet map!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
   <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
   <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
   <script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
   <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
 
-  <style>
-  * {
+<style>
+* {
   box-sizing: border-box;
 }
 
@@ -57,15 +53,9 @@ body {
   margin-left: 200px;
   padding-left: 20px;
 }
-     #map {
-    height: 100%;
-    left: 200
-  }
+</style>
 
-  </style>
-  
-  
-  <style>
+ <style>
     body {
       margin: 0;
       padding: 0;
@@ -128,14 +118,25 @@ body {
       border-bottom-color: rgb(61, 59, 59);
     }
      </style>
-     
+
+
 </head>
-
+ <div id='map'></div>
 <body>
- 
-<div id="map"></div>
 
-  <script>
+<div class="sidenav">
+  <a href="#">Studio 4 Maps</a>
+  <a href="index.html">Food Banks in CA</a>
+  <a href="Boston_Rats.html">Rats in Boston!</a>
+  <a href="meals.html">Access to meal sites for K-12 families in Boston, MA</a>
+</div>
+
+<div class="content">
+  <h2>CSS Template</h2>
+  <p>A full-height, fixed sidenav and content.</p>
+</div>
+
+<script>
 // Get the Sidebar
 var mySidebar = document.getElementById("mySidebar");
 
@@ -157,6 +158,7 @@ function w3_open() {
 function w3_close() {
   mySidebar.style.display = "none";
   overlayBg.style.display = "none";
+  
   
     var transformRequest = (url, resourceType) => {
       var isMapboxRequest =
@@ -357,15 +359,6 @@ function w3_close() {
     });
 
 </script>
-  
-  <div id="map"></div>
-<div class="sidenav">
-  <a href="#">Studio 4 Maps</a>
-  <a href="index.html">Food Banks in CA</a>
-  <a href="Boston_Rats.html">Rats in Boston!</a>
-  <a href="meals.html">Access to meal sites for K-12 families in Boston, MA</a>
-</div>
 
-  
 </body>
 </html>
